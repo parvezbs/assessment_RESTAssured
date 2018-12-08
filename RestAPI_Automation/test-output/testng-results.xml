@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="4" ignored="0" total="7" passed="3">
+  <reporter-output>
+    <line>
+      <![CDATA[API hit is successful with status code 200]]>
+    </line>
+    <line>
+      <![CDATA[Size of the object minutely.data is 61]]>
+    </line>
+    <line>
+      <![CDATA[Size of the object hourly.data is 49]]>
+    </line>
+    <line>
+      <![CDATA[Size of the object daily.data is 8]]>
+    </line>
+    <line>
+      <![CDATA[The key latitude is available in the response]]>
+    </line>
+    <line>
+      <![CDATA[The key longitude is available in the response]]>
+    </line>
+    <line>
+      <![CDATA[The key currently is available in the response]]>
+    </line>
+    <line>
+      <![CDATA[The key minutely is available in the response]]>
+    </line>
+    <line>
+      <![CDATA[The key hourly is available in the response]]>
+    </line>
+    <line>
+      <![CDATA[The key daily is available in the response]]>
+    </line>
+    <line>
+      <![CDATA[The key flags is available in the response]]>
+    </line>
+    <line>
+      <![CDATA[The key offset is available in the response]]>
+    </line>
+    <line>
+      <![CDATA[The key timezone is available in the response]]>
+    </line>
+    <line>
+      <![CDATA[The currently.time value is, 1544299503]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite" duration-ms="15594" started-at="2018-12-08T20:04:55Z" finished-at="2018-12-08T20:05:11Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="15594" started-at="2018-12-08T20:04:55Z" finished-at="2018-12-08T20:05:11Z">
+      <class name="getMethods.getClass">
+        <test-method status="PASS" signature="validateApiGatewayReadiness()[pri:0, instance:getMethods.getClass@3c679bde]" name="validateApiGatewayReadiness" is-config="true" duration-ms="6811" started-at="2018-12-08T20:04:55Z" finished-at="2018-12-08T20:05:02Z">
+          <reporter-output>
+            <line>
+              <![CDATA[API hit is successful with status code 200]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateApiGatewayReadiness -->
+        <test-method status="PASS" signature="validateResponseObjectSize()[pri:0, instance:getMethods.getClass@3c679bde]" name="validateResponseObjectSize" duration-ms="996" started-at="2018-12-08T20:05:02Z" finished-at="2018-12-08T20:05:03Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Size of the object minutely.data is 61]]>
+            </line>
+            <line>
+              <![CDATA[Size of the object hourly.data is 49]]>
+            </line>
+            <line>
+              <![CDATA[Size of the object daily.data is 8]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateResponseObjectSize -->
+        <test-method status="FAIL" signature="validateResponseObjectTypeOfLatitude()[pri:0, instance:getMethods.getClass@3c679bde]" name="validateResponseObjectTypeOfLatitude" duration-ms="1883" started-at="2018-12-08T20:05:03Z" finished-at="2018-12-08T20:05:05Z">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson or Gson in the classpath.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson or Gson in the classpath.
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:235)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
+at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:61)
+at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:222)
+at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:164)
+at getMethods.getClass.validateResponseObjectTypeOfLatitude(getClass.java:56)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at getMethods.MainExecutor.main(MainExecutor.java:16)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateResponseObjectTypeOfLatitude -->
+        <test-method status="FAIL" signature="validateResponseObjectTypeOfOffset()[pri:0, instance:getMethods.getClass@3c679bde]" name="validateResponseObjectTypeOfOffset" duration-ms="1788" started-at="2018-12-08T20:05:05Z" finished-at="2018-12-08T20:05:07Z">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson or Gson in the classpath.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson or Gson in the classpath.
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
+at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:61)
+at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
+at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:222)
+at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:164)
+at getMethods.getClass.validateResponseObjectTypeOfOffset(getClass.java:80)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at getMethods.MainExecutor.main(MainExecutor.java:16)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateResponseObjectTypeOfOffset -->
+        <test-method status="FAIL" signature="validateResponseObjectTypeTimezone()[pri:0, instance:getMethods.getClass@3c679bde]" name="validateResponseObjectTypeTimezone" duration-ms="2043" started-at="2018-12-08T20:05:07Z" finished-at="2018-12-08T20:05:09Z">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson or Gson in the classpath.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson or Gson in the classpath.
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
+at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:61)
+at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
+at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:222)
+at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:164)
+at getMethods.getClass.validateResponseObjectTypeTimezone(getClass.java:92)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at getMethods.MainExecutor.main(MainExecutor.java:16)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateResponseObjectTypeTimezone -->
+        <test-method status="FAIL" signature="validateResponseObjectTypesOfLongitude()[pri:0, instance:getMethods.getClass@3c679bde]" name="validateResponseObjectTypesOfLongitude" duration-ms="1925" started-at="2018-12-08T20:05:09Z" finished-at="2018-12-08T20:05:11Z">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson or Gson in the classpath.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: Cannot parse object because no JSON deserializer found in classpath. Please put either Jackson or Gson in the classpath.
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
+at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:61)
+at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
+at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:222)
+at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:164)
+at getMethods.getClass.validateResponseObjectTypesOfLongitude(getClass.java:68)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at getMethods.MainExecutor.main(MainExecutor.java:16)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateResponseObjectTypesOfLongitude -->
+        <test-method status="PASS" signature="validateResponsekeysArePresent()[pri:0, instance:getMethods.getClass@3c679bde]" name="validateResponsekeysArePresent" duration-ms="10" started-at="2018-12-08T20:05:11Z" finished-at="2018-12-08T20:05:11Z">
+          <reporter-output>
+            <line>
+              <![CDATA[The key latitude is available in the response]]>
+            </line>
+            <line>
+              <![CDATA[The key longitude is available in the response]]>
+            </line>
+            <line>
+              <![CDATA[The key currently is available in the response]]>
+            </line>
+            <line>
+              <![CDATA[The key minutely is available in the response]]>
+            </line>
+            <line>
+              <![CDATA[The key hourly is available in the response]]>
+            </line>
+            <line>
+              <![CDATA[The key daily is available in the response]]>
+            </line>
+            <line>
+              <![CDATA[The key flags is available in the response]]>
+            </line>
+            <line>
+              <![CDATA[The key offset is available in the response]]>
+            </line>
+            <line>
+              <![CDATA[The key timezone is available in the response]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateResponsekeysArePresent -->
+        <test-method status="PASS" signature="validateResposevalueOfAnArrayInTime()[pri:0, instance:getMethods.getClass@3c679bde]" name="validateResposevalueOfAnArrayInTime" duration-ms="92" started-at="2018-12-08T20:05:11Z" finished-at="2018-12-08T20:05:11Z">
+          <reporter-output>
+            <line>
+              <![CDATA[The currently.time value is, 1544299503]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validateResposevalueOfAnArrayInTime -->
+      </class> <!-- getMethods.getClass -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
